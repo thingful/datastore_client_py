@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'iotstore_client'
+project = 'datastore_client'
 copyright = '2018, Sam Mulube'
 author = 'Sam Mulube'
 
@@ -105,7 +105,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'iotstore_clientdoc'
+htmlhelp_basename = 'datastore_clientdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -132,7 +132,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'iotstore_client.tex', 'iotstore\\_client Documentation',
+    (master_doc, 'datastore_client.tex', 'datastore\\_client Documentation',
      'Sam Mulube', 'manual'),
 ]
 
@@ -142,7 +142,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'iotstore_client', 'iotstore_client Documentation',
+    (master_doc, 'datastore_client', 'datastore_client Documentation',
      [author], 1)
 ]
 
@@ -153,8 +153,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'iotstore_client', 'iotstore_client Documentation',
-     author, 'iotstore_client', 'One line description of project.',
+    (master_doc, 'datastore_client', 'datastore_client Documentation',
+     author, 'datastore_client', 'One line description of project.',
      'Miscellaneous'),
 ]
 

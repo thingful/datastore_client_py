@@ -13,7 +13,7 @@ A client instance can be initialized as follows::
 
     from datetime import datetime, timedelta
 
-    from iotstore_client.datastore_pb2_twirp import DatastoreClient
+    from datastore_client.datastore_pb2_twirp import DatastoreClient
 
     # create our API client
     datastore_address = 'http://datastore:8080'
@@ -21,7 +21,7 @@ A client instance can be initialized as follows::
     # initialize a client instance for the given datastore address
     client = DatastoreClient(datastore_address)
 
-.. note:: Currently the client does not require any authentication information
+.. important:: Currently the client does not require any authentication information
    to be be added when making requests, but this may change if the DECODE system
    requires this.
 
@@ -33,7 +33,7 @@ from the encrypted datastore::
 
     from datetime import datetime, timedelta
 
-    from iotstore_client.datastore_pb2 import ReadRequest
+    from datastore_client.datastore_pb2 import ReadRequest
 
     # we create a start_time of 1 hour ago
     start_time = datetime.now() - timedelta(hours=1)
@@ -58,7 +58,7 @@ from the encrypted datastore::
 
     while True:
         for event in response.events:
-            print(event.data)
+            print(event.data) # encoded data requiring decryption
             print(event.event_time.ToJsonString())
 
         if response.next_page_cursor == "":
@@ -68,8 +68,9 @@ from the encrypted datastore::
         response = client.read_data(read_request)
 
 
-Note in the above code example we continue consuming events until the server
-returns an empty value for ``next_page_cursor``.
+Note in the above code example we continue consuming data from the server until
+it returns an empty value for ``next_page_cursor``. In a real application we
+would need to decode the retrieved data for each ``event``.
 
 Writing Data
 ------------
@@ -79,7 +80,7 @@ data::
 
     from datetime import datetime, timedelta
 
-    from iotstore_client.datastore_pb2 import WriteRequest
+    from datastore_client.datastore_pb2 import WriteRequest
 
     # obtain the public key we are requesting data for
     public_key = 'BGBgTKU7ZJHRBl...'

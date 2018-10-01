@@ -1,1 +1,1 @@
-name = 'iotstore_client'
+name = 'datastore_client'

@@ -14,3 +14,10 @@ server stubs as well as client bindings in a number of programming languages
 and can be thought of as being akin to a simpler version of
 [GRPC](https://grpc.io).
 
+## Documentation
+
+Documentation for this library has been published to:
+https://decode-datastore-client.readthedocs.io/en/latest/
+
+Please have a look there for some more detailed installation instructions and
+usage examples.

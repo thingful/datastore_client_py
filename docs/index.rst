@@ -3,8 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DECODE Iot Pilot datastore_client's documentation!
-==================================================
+DECODE Iot Pilot Datastore Client documentation
+===============================================
+
+.. image:: https://img.shields.io/github/license/thingful/decode-datastore-client-py.svg
+   :target: https://github.com/thingful/decode-datastore-client-py/blob/master/LICENSE
+
+.. image:: https://img.shields.io/github/issues/thingful/decode-datastore-client-py.svg
+   :target: https://github.com/thingful/decode-datastore-client-py/issues
+
 
 .. toctree::
    :maxdepth: 2
@@ -13,11 +20,3 @@ DECODE Iot Pilot datastore_client's documentation!
    pages/intro
    pages/usage
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

@@ -1,4 +1,4 @@
-# datastore_client
+# decode-datastore-client
 
 This library contains a minimal client library developed as part of the DECODE
 project in order to provide a Python client for the encrypted datastore

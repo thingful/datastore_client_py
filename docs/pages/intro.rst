@@ -37,4 +37,6 @@ freely in either open source or proprietary, closed source software.
 Install
 -------
 
-Some info on install
+To install the library please run the following command::
+
+    $ pip install decode-datastore-client

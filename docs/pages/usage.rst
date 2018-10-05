@@ -36,7 +36,7 @@ from the encrypted datastore::
     from datastore_client.datastore_pb2 import ReadRequest
 
     # we create a start_time of 1 hour ago
-    start_time = datetime.now() - timedelta(hours=1)
+    start_time = datetime.utcnow() - timedelta(hours=1)
 
     # obtain the public key we are requesting data for
     public_key = 'BGBgTKU7ZJHRBl...'

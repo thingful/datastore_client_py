@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='decode.iot.datastore',
   syntax='proto3',
   serialized_options=_b('Z\tdatastore'),
-  serialized_pb=_b('\n\x0f\x64\x61tastore.proto\x12\x14\x64\x65\x63ode.iot.datastore\x1a\x1fgoogle/protobuf/timestamp.proto\"0\n\x0cWriteRequest\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x0f\n\rWriteResponse\"\xa7\x01\n\x0bReadRequest\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12.\n\nstart_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0bpage_cursor\x18\x04 \x01(\t\x12\x11\n\tpage_size\x18\x05 \x01(\r\"N\n\x0e\x45ncryptedEvent\x12.\n\nevent_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x85\x01\n\x0cReadResponse\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12\x34\n\x06\x65vents\x18\x02 \x03(\x0b\x32$.decode.iot.datastore.EncryptedEvent\x12\x18\n\x10next_page_cursor\x18\x03 \x01(\t\x12\x11\n\tpage_size\x18\x04 \x01(\r2\xb4\x01\n\tDatastore\x12T\n\tWriteData\x12\".decode.iot.datastore.WriteRequest\x1a#.decode.iot.datastore.WriteResponse\x12Q\n\x08ReadData\x12!.decode.iot.datastore.ReadRequest\x1a\".decode.iot.datastore.ReadResponseB\x0bZ\tdatastoreb\x06proto3')
+  serialized_pb=_b('\n\x0f\x64\x61tastore.proto\x12\x14\x64\x65\x63ode.iot.datastore\x1a\x1fgoogle/protobuf/timestamp.proto\"F\n\x0cWriteRequest\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x14\n\x0c\x64\x65vice_token\x18\x03 \x01(\t\"\x0f\n\rWriteResponse\"\xa7\x01\n\x0bReadRequest\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12.\n\nstart_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0bpage_cursor\x18\x04 \x01(\t\x12\x11\n\tpage_size\x18\x05 \x01(\r\"N\n\x0e\x45ncryptedEvent\x12.\n\nevent_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x85\x01\n\x0cReadResponse\x12\x12\n\npublic_key\x18\x01 \x01(\t\x12\x34\n\x06\x65vents\x18\x02 \x03(\x0b\x32$.decode.iot.datastore.EncryptedEvent\x12\x18\n\x10next_page_cursor\x18\x03 \x01(\t\x12\x11\n\tpage_size\x18\x04 \x01(\r2\xb4\x01\n\tDatastore\x12T\n\tWriteData\x12\".decode.iot.datastore.WriteRequest\x1a#.decode.iot.datastore.WriteResponse\x12Q\n\x08ReadData\x12!.decode.iot.datastore.ReadRequest\x1a\".decode.iot.datastore.ReadResponseB\x0bZ\tdatastoreb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -48,6 +48,13 @@ _WRITEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='device_token', full_name='decode.iot.datastore.WriteRequest.device_token', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -61,7 +68,7 @@ _WRITEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=74,
-  serialized_end=122,
+  serialized_end=144,
 )
 
 
@@ -84,8 +91,8 @@ _WRITERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=124,
-  serialized_end=139,
+  serialized_start=146,
+  serialized_end=161,
 )
 
 
@@ -143,8 +150,8 @@ _READREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=142,
-  serialized_end=309,
+  serialized_start=164,
+  serialized_end=331,
 )
 
 
@@ -181,8 +188,8 @@ _ENCRYPTEDEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=311,
-  serialized_end=389,
+  serialized_start=333,
+  serialized_end=411,
 )
 
 
@@ -233,8 +240,8 @@ _READRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=525,
+  serialized_start=414,
+  serialized_end=547,
 )
 
 _READREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -292,8 +299,8 @@ _DATASTORE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=528,
-  serialized_end=708,
+  serialized_start=550,
+  serialized_end=730,
   methods=[
   _descriptor.MethodDescriptor(
     name='WriteData',

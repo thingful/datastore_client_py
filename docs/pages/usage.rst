@@ -82,11 +82,12 @@ data::
 
     from datastore_client.datastore_pb2 import WriteRequest
 
-    # obtain the public key we are requesting data for
+    # obtain the public key we are writing data for
     public_key = 'BGBgTKU7ZJHRBl...'
 
     write_request = WriteRequest()
     write_request.public_key = public_key
     write_request.data = b'encrypted bytes'
+    write_request.device_token = 'abc123'
 
     client.write_data(write_request)

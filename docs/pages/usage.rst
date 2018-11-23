@@ -38,14 +38,14 @@ from the encrypted datastore::
     # we create a start_time of 1 hour ago
     start_time = datetime.utcnow() - timedelta(hours=1)
 
-    # obtain the public key we are requesting data for
-    public_key = 'BGBgTKU7ZJHRBl...'
+    # the id of the policy for which we are requesting data
+    policy_id = 'BGBgTKU'
 
     # construct our read request
     read_request = ReadRequest()
 
-    # set the public key we are requesting data for
-    read_request.public_key = public_key
+    # set the policy id for which we are requesting data
+    read_request.policy_id = policy_id
 
     # set the start time from our datetime object
     read_request.start_time.FromDatetime(start_time)
@@ -82,11 +82,11 @@ data::
 
     from datastore_client.datastore_pb2 import WriteRequest
 
-    # obtain the public key we are writing data for
-    public_key = 'BGBgTKU7ZJHRBl...'
+    # the policy_id for which we are writing data
+    policy_id = 'BGBgTKU...'
 
     write_request = WriteRequest()
-    write_request.public_key = public_key
+    write_request.policy_id = policy_id
     write_request.data = b'encrypted bytes'
     write_request.device_token = 'abc123'
 

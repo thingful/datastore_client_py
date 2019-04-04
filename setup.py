@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='decode-datastore-client',
-    version='0.1.0',
+    version='0.2.0',
     maintainer='Sam Mulube',
     maintainer_email='sam@thingful.net',
     url='https://github.com/thingful/decode-datastore-client-py',
